@@ -29,5 +29,15 @@ class PageFeedTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testGetTitle() {
+        
+        let viewModel = RedditViewModel()
+        XCTAssert((viewModel.getTitle(at: 1) != nil), "Title data does not exist")
+    }
+    
+    // MARK -
+    func testNewtworkCal() {
+        
+    }
 }

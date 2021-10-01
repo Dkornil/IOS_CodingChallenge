@@ -14,7 +14,6 @@ enum AppConstantsURL {
 }
 
 enum customFontSize {
-    
     static let boldFontSize = 16.0
     static let spacingBetweenViews = 6
 }

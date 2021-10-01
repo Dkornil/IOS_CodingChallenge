@@ -19,6 +19,7 @@ class TableViewController: UIViewController {
         tableview.accessibilityIdentifier = "MainTableView"
         return tableview
     }()
+    
     private let feedViewModel = RedditViewModel()
     private var subscribers = Set<AnyCancellable>()
 
@@ -48,16 +49,11 @@ class TableViewController: UIViewController {
             }
             .store(in: &subscribers)
         
-        
-        
         handleErrorBinding()
         
         feedViewModel.loadFeeds()
         
-        
         updateBinding()
-        
-       
     }
     
     private func handleErrorBinding()
@@ -73,6 +69,7 @@ class TableViewController: UIViewController {
             .store(in: &subscribers)
         
     }
+    
     private func updateBinding()
     {
         feedViewModel
@@ -84,7 +81,6 @@ class TableViewController: UIViewController {
             }
             .store(in: &subscribers)
     }
-    
 }
 
 extension TableViewController: UITableViewDataSource {

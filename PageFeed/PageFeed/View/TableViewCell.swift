@@ -60,17 +60,7 @@ class TableViewCell: UITableViewCell {
         
         return score
     }()
-    
-    
-//    override func layoutSubviews() {
-//
-//        super.layoutSubviews()
-//        // spacing between tableViewCells
-//        let buttomSpace: CGFloat = 10.00
-//        self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: buttomSpace, right: 0))
-//    }
  
-    
     func configureCell(title: String?, score: String?, numComments: String?, imageData: Data?) {
         let formattedText = Utilities()
         
@@ -100,6 +90,7 @@ class TableViewCell: UITableViewCell {
         if let _ = imageData {
             vStackView.addArrangedSubview(feedImageView)
         }
+        
         //horizantal Stack for : Score, Comments, Share
         //subView of Vertical Stack View
         let hStackView = UIStackView(frame: .zero)
@@ -124,5 +115,4 @@ class TableViewCell: UITableViewCell {
         vStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8.0).isActive = true
         vStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -18.0).isActive = true
     }
-    
 }
