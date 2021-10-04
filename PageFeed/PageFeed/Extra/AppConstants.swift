@@ -2,7 +2,7 @@
 //  AppConstants.swift
 //  PageFeed
 //
-//  Created by Field Employee on 10/1/21.
+//  Created by Daniil Kornilov on 10/4/21.
 //
 
 import Foundation

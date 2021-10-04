@@ -2,7 +2,7 @@
 //  AppViewModel.swift
 //  PageFeed
 //
-//  Created by Field Employee on 10/1/21.
+//  Created by Daniil Kornilov on 10/4/21.
 //
 
 import Foundation
@@ -38,7 +38,7 @@ class RedditViewModel {
             receiveValue: { [unowned self] data in
                 let nsData = NSData(data: data)
                 imagesCache.setObject(nsData, forKey: key)
-                rowUpdate = 0
+                rowUpdate = row
             }
             .store(in: &publishers)
     }
